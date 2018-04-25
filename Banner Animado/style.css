@@ -1,0 +1,112 @@
+@charset "UTF-8";
+/* { COMMON */
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+body {
+	width: 300px;
+	height: 250px;
+	cursor: default;
+}
+
+img {
+	border-style: none;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+}
+
+sup {
+	font-size: 8px;
+}
+
+#bgColor, #F1, #F2 {
+	position: absolute;
+	width: 300px;
+	height: 250px;
+	font-family: Impact, sans-serif;
+	overflow: hidden;
+}
+
+#bgColor {
+	background-color: #b3e1e1;
+}
+
+#f1Text1, #f1Text2, #f1Text3, #f1Text4, #f2Text1, #f2Text2, #disclaimer, #ctaText {
+	position: absolute;
+}
+
+#f1Text1 {
+	left: 126px;
+	top: 66px;
+	font-size: 24px;
+	line-height: 22px;
+	color: #11647a;
+}
+
+#f1Text2 {
+	left: 126px;
+	top: 110px;
+	font-size: 24px;
+	line-height: 22px;
+	color: #ffffff;
+}
+
+#F2 {
+	opacity: 0;
+}
+
+#logo {
+	position: absolute;
+	left: 119px;
+	top: 68px;
+}
+
+#f2Text1 {
+	left: 117px;
+	top: 97px;
+	font-size: 34px;
+	line-height: 31px;
+	color: #11647a;
+}
+
+#f2Text2 {
+	left: 118px;
+	top: 97px;
+	font-size: 26px;
+	line-height: 24px;
+	color: #11647a;
+}
+
+#disclaimer {
+	left: 213px;
+	top: 202px;
+	font-family: Arial, sans-serif;
+	font-size: 6px;
+	color: #ffffff;
+}
+
+#ctaBG {
+	position: absolute;
+	left: 0;
+	top: 209px;
+	width: 300px;
+	height: 41px;
+	background-color: #11647a;
+}
+
+#ctaText {
+	left: 188px;
+	top: 218px;
+	font-size: 19px;
+	color: #ffffff;
+}
+
+#ctaArrow {
+	position: absolute;
+	left: 270px;
+	top: 222px;
+}

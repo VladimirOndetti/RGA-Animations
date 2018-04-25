@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="ad.size" content="width=300, height=250">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0">
+    <link rel="stylesheet" href="style.css" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenMax.min.js"></script>
+	<script>
+		if(document.readyState === "complete") {
+		  adVisible();
+		}
+		else {
+		  document.addEventListener("DOMContentLoaded", function () {
+		    adVisible();
+		  }, false);
+		}
+
+		function adVisible() {
+
+			var f1Text1_txt = "YA ES HORA DE ALGO NUEVO";
+			var f1Text2_txt = "UN <br>PRODUCTO <br>PARA TODOS.";
+			var f1Text3_txt = "";
+			var f1Text4_txt = "";
+			var shadow_img = "shadowProductImage.png";
+			var prod_img = "productImage.png";
+			var gif_img = "animGIF.png";
+			var f2Text1_txt = "COOL MINT.";
+			var f2Text2_txt = "LA FRESCURA<br>DE SIEMPRE. <br>EN UN NUEVO <br>ENVACE.";
+			var disclaimer_txt = "*Lorem Ipsum.";
+			var ctaText_txt = "COMPRAR";
+			var logo_img = "listerineLogo.png";
+			var ctaArrow_img = "ctaArrow.png";
+
+			// Frame 1
+
+			var _shadow = document.getElementById("shadow");
+			var _f1Product = document.getElementById("product1");
+			var _animGIF = document.getElementById("gif");
+			var _f1Text1 = document.getElementById("f1Text1");
+			var _f1Text2 = document.getElementById("f1Text2");
+			var _f1Text3 = document.getElementById("f1Text3");
+			var _f1Text4 = document.getElementById("f1Text4");
+
+			_f1Text1.innerHTML = f1Text1_txt;
+			_f1Text2.innerHTML = f1Text2_txt;
+			_f1Text3.innerHTML = f1Text3_txt;
+			_f1Text4.innerHTML = f1Text4_txt;
+			_shadow.src = shadow_img;
+			_f1Product.src = prod_img;
+			_animGIF.src = gif_img;
+
+			// Frame 2
+
+			var _f2Product = document.getElementById("product2");
+			var _logo = document.getElementById("logoImg");
+			var _f2Text1 = document.getElementById("f2Text1");
+			var _f2Text2 = document.getElementById("f2Text2");
+			var _disclaimer = document.getElementById("disclaimer");
+			var _ctaText = document.getElementById("ctaText");
+			var _ctaArrow = document.getElementById("arrowImg");
+
+			_f2Product.src = prod_img;
+			_logo.src = logo_img;
+			_f2Text1.innerHTML = f2Text1_txt;
+			_f2Text2.innerHTML = f2Text2_txt;
+			_disclaimer.innerHTML = disclaimer_txt;
+			_ctaText.innerHTML = ctaText_txt;
+			_ctaArrow.src =	ctaArrow_img;
+
+			doAnimation();
+
+		}
+
+	</script>
+</head>
+<body>
+	<div id="bgColor">
+		<!-- <img src="frame3.jpg"> -->
+		<div id="bgLink">
+			<div id="prodImgF1">
+				<img id="shadow" src="">
+				<img id="product1" src="">
+			</div>
+		</div>
+	</div>
+	<div id="F1">
+		<div id="animGIF">
+			<img id="gif" src="">
+		</div>
+		<div id="f1Text1"></div>
+		<div id="f1Text2"></div>
+		<div id="f1Text3"></div>
+		<div id="f1Text4"></div>
+	</div>
+	<div id="F2">
+		<div id="cta">
+			<div id="ctaLink">
+				<div id="ctaBG"></div>
+				<div id="ctaText"></div>
+				<div id="ctaArrow">
+					<img id="arrowImg" src="">
+				</div>
+			</div>
+		</div>
+		<div id="prodImgF2">
+			<img id="product2" src="">
+		</div>
+		<div id="logo">
+			<img id="logoImg" src="">
+		</div>
+		<div id="f2Text1"></div>
+		<div id="f2Text2"></div>
+		<div id="disclaimer"></div>
+	</div>
+</body>
+<script>
+	function doAnimation () {
+
+		// Create a timeline
+		var tl = new TimelineLite();
+
+		// Animation Frame 1
+		tl.from(f1Text1, .25, {opacity: 0, scale: 3, delay: .5})
+		  .from(animGIF, .5, {opacity: 0, delay: .5})
+		  .from(f1Text2, .25, {opacity: 0, scale: 3, delay: 1})
+		  .to(f1Text1, .25, {x: 300, delay: 2})
+		  .to(f1Text2, .25, {x: 300}, '-=0.25')
+  		  .to(animGIF, .5, {opacity: 0}, '-=0.25');
+
+  	// Animation Frame 2
+		tl.to(F2, 0, {opacity:1})
+		  .from(logoImg, .25, {opacity:0, scale: 3, delay: .5})
+		  .from(f2Text1, .25, {opacity:0, scale: 3, delay: .5})
+		  .to(f2Text1, .25, {x: 300, delay: 2})
+		  .from(f2Text2, .25, {opacity:0, scale: 3, delay: .5})
+		  .from(cta, 1, {y:250, delay: .5})
+		  .from(disclaimer, .5, {opacity: 0, delay: 1});
+
+	};
+</script>
+</html>
